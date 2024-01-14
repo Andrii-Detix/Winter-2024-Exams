@@ -1,25 +1,18 @@
 // Extract substring between prefix and suffix
 
-// Step 3
-// Improve naming
-// Replace 'k' with 'index'
+// Step 4
+// Declare variables 'startPos' and 'finishPos' instead 'index'
+// Simplify code and remove unneeded
 
 'use strict';
 
 const getValueBetween = (str, prefix, suffix) => {
-  let index = str.indexOf(prefix);
-  if (index === -1) return "";
-  else {
-    index = index + prefix.length;
-    str = str.substring(index);
-    if (suffix) {
-      index = str.indexOf(suffix);
-      if (index === -1) {
-        return "";
-      } else {
-        str = str.substring(0, index);
-      }
-    }
+  const startPos = str.indexOf(prefix) + 1;
+  const finishPos = str.indexOf(suffix);
+  if (startPos === -1 || finishPos === -1) {
+    return "";
+  } else {
+    str = str.substring(startPos, finishPos);
   }
   return str;
 };
