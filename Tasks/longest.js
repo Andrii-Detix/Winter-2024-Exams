@@ -1,25 +1,24 @@
 // Find longest string
 
-// Step 4
-// Remove unneeded parameter maxRandom, unneeded 'else' branches, brackets
-// Remove the initial value of the 's' variable
+// Step 5
+// Improve naming
 
 'use strict';
 
-const longest = (line = []) => {
-  let x = -1;
-  let s;
-  for (let i of line) {
-    if (i.length > x) {
-      x = i.length;
+const getLongestString = (lines = []) => {
+  let maxLength = -1;
+  let res;
+  for (let str of lines) {
+    if (str.length > maxLength) {
+      maxLength = str.length;
     } else {
-      i = 0;
+      str = 0;
     }
-    if (i.length >= x) {
-      s = i;
+    if (str.length >= maxLength) {
+      res = str;
     }
   }
-  return s;
+  return res;
 };
 
-module.exports = longest;
+module.exports = getLongestString;
