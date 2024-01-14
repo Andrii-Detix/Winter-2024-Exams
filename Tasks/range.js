@@ -1,5 +1,10 @@
 // Generate int array from given range
 
+// Step 1
+// Add 'use strict';
+
+'use strict';
+
 _range = (...Range) => {
   let [from, to] = Range;
   if (to >= from) {
