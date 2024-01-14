@@ -1,12 +1,14 @@
 // Find key by value
 
-// Step 6
-// Simplify if..else branching
+// Step 7
+// Declare 'keys'
+// Prefer for..of instead of for..in
 
 'use strict';
 
 const findKey = (object, value) => {
-  for (const key in object) {
+  const keys = Object.keys(object);
+  for (const key of keys) {
     if (object[key] === value) {
       return key;
     }
