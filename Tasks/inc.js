@@ -1,13 +1,15 @@
 // Increment all numbers in dictionary
 
-// Step 6
-// Change the check to the number type
+// Step 7
+// Declare 'keys'
+// Prefer for..of
 
 'use strict';
 
 const incNumbers = (obj) => {
   let result = structuredClone(obj);
-  for (const key in obj) {
+  const keys = Object.keys(result);
+  for (const key of keys) {
     if (typeof result[key] === "number") {
       result[key] = result[key] + 1;
     }
