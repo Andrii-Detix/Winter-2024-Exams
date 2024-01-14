@@ -1,16 +1,19 @@
 // Sum all number values in dict
 
+// Step 1
+// Add 'use strict';
+// Remove empty blocks
+// Replace '' with ""
+
+'use strict';
+
 count = (obj) => {
   sum = 0;
-  {
-  }
   keys = Object.keys(obj);
   keys.forEach((key) => {
-    [];
     const value = obj[key];
-    if (typeof value === 'number') sum += value;
+    if (typeof value === "number") sum += value;
   });
-  ({});
   return sum;
 };
 
