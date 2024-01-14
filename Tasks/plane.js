@@ -1,17 +1,16 @@
 // Make nested array plane
 
-// Step 4
-// Move 'res' to function block
-// Remove unnecessary code
+// Step 5
+// Rename function
 
 'use strict';
 
-const const_plane = (arr) => {
+const plane = (arr) => {
   const res = [];
   for (let i = 0; i < arr.length; i++) {
     const value = arr[i];
     if (Array.isArray(value)) {
-      res.push(...const_plane(value));
+      res.push(...plane(value));
     } else {
       res.push(value);
     }
@@ -19,4 +18,4 @@ const const_plane = (arr) => {
   return res;
 };
 
-module.exports = const_plane;
+module.exports = plane;
