@@ -1,15 +1,14 @@
 // Increment all numbers in dictionary
 
-// Step 5
-// Declare 'result', copy 'obj' to 'result'
-// Use 'result' instead of 'obj' to not mutate incoming parameter
+// Step 6
+// Change the check to the number type
 
 'use strict';
 
 const incNumbers = (obj) => {
   let result = structuredClone(obj);
   for (const key in obj) {
-    if ((typeof result[key]).charAt(0).toUpperCase() === "N") {
+    if (typeof result[key] === "number") {
       result[key] = result[key] + 1;
     }
   }
