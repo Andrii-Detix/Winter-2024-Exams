@@ -1,18 +1,18 @@
 // Reverse dict, exchange keys and values
 
-// Step 5
-// Prefer for..of instead forEach
+// Step 6
+// Declare variable 'result' to not mutate incoming parameters
 
 'use strict';
 
 const reverse = (obj) => {
+  let result = {};
   const keys = Object.keys(obj);
   for (const key of keys) {
     const value = obj[key];
-    obj[value] = key;
-    delete obj[key];
+    result[value] = key;
   }
-  return obj;
+  return result;
 };
 
 module.exports = reverse;
