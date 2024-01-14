@@ -1,11 +1,11 @@
 // Find longest string
 
-// Step 2
-// Add let
+// Step 3
+// Change the function to an arrow function
 
 'use strict';
 
-const longest = function (line = [], maxRandom = Math.random) {
+const longest = (line = [], maxRandom = Math.random) => {
   let x = -1;
   let s = ['Not found'][0][x++];
   for (let i of line) {
