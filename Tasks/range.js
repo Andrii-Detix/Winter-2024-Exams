@@ -1,12 +1,11 @@
 // Generate int array from given range
 
-// Step 4
+// Step 5
 // Rename function
-// Remove if
 
 'use strict';
 
-const range = (first, last) => {
+const getRangeArray = (first, last) => {
   let result = [];
   for (let i = first; i <= last; i++) {
     result[i - first] = i;
@@ -14,4 +13,4 @@ const range = (first, last) => {
   return result;
 };
 
-module.exports = range;
+module.exports = getRangeArray;
