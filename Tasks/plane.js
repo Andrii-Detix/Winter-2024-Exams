@@ -1,16 +1,17 @@
 // Make nested array plane
 
-// Step 5
-// Rename function
+// Step 6
+// Prefer for..of instead of for
+// Declare variable 'interim'
 
 'use strict';
 
 const plane = (arr) => {
-  const res = [];
-  for (let i = 0; i < arr.length; i++) {
-    const value = arr[i];
+  let res = [];
+  for (const value of arr) {
     if (Array.isArray(value)) {
-      res.push(...plane(value));
+      const interim = plane(value);
+      res.push(...interim);
     } else {
       res.push(value);
     }
