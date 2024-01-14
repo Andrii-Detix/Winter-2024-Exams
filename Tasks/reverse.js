@@ -1,17 +1,17 @@
 // Reverse dict, exchange keys and values
 
-// Step 4
-// Improve naming
+// Step 5
+// Prefer for..of instead forEach
 
 'use strict';
 
 const reverse = (obj) => {
   const keys = Object.keys(obj);
-  keys.forEach((key) => {
+  for (const key of keys) {
     const value = obj[key];
     obj[value] = key;
     delete obj[key];
-  });
+  }
   return obj;
 };
 
