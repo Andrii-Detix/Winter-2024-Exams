@@ -1,20 +1,19 @@
 // Merge two dictionaries
 
-// Step 4
-// Remove unneeded code
-// Change the initial value of the 'object_3' variable
+// Step 5
+// Improve naming
 
 'use strict';
 
-const merge_two_objects = (object_1, object_2) => {
-  let object_3 = {};
-  for (const attribute_name in object_1) {
-    object_3[attribute_name] = object_1[attribute_name];
+const mergeTwoObjects = (object1, object2) => {
+  let merged = {};
+  for (const key in object1) {
+    merged[key] = object1[key];
   }
-  for (const attribute_name in object_2) {
-    object_3[attribute_name] = object_2[attribute_name];
+  for (const key in object2) {
+    merged[key] = object2[key];
   }
-  return object_3;
+  return merged;
 };
 
-module.exports = merge_two_objects;
+module.exports = mergeTwoObjects;
