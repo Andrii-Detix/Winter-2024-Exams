@@ -1,11 +1,11 @@
 // Generate int array from given range
 
-// Step 1
-// Add 'use strict';
+// Step 2
+// Add const
 
 'use strict';
 
-_range = (...Range) => {
+const _range = (...Range) => {
   let [from, to] = Range;
   if (to >= from) {
     Range = new Array(to - from + 1);
