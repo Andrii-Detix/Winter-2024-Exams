@@ -1,15 +1,14 @@
 // Find longest string
 
-// Step 6
-// Change if..else branches
-// Change let str to const str
+// Step 7
+// Rename 'lines' to 'strings'
 
 'use strict';
 
-const getLongestString = (lines = []) => {
+const getLongestString = (strings = []) => {
   let maxLength = -1;
   let res;
-  for (const str of lines) {
+  for (const str of strings) {
     if (str.length > maxLength) {
       maxLength = str.length;
       res = str;
