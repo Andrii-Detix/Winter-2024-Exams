@@ -1,18 +1,18 @@
 // Find key by value
 
-// Step 4
-// Replace rest parameter 'rest' to 'value'
+// Step 5
+// Improve naming
 
 'use strict';
 
-const find = (object, value) => {
-  for (const name in object) {
-    if (object[name] !== value) {
+const findKey = (object, value) => {
+  for (const key in object) {
+    if (object[key] !== value) {
     } else {
-      return name;
+      return key;
     }
   }
   return undefined;
 };
 
-module.exports = find;
+module.exports = findKey;
