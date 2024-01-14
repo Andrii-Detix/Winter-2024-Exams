@@ -1,16 +1,16 @@
 // Merge two dictionaries
 
-// Step 5
-// Improve naming
+// Step 6
+// Prefer for..of instead for..in
 
 'use strict';
 
 const mergeTwoObjects = (object1, object2) => {
   let merged = {};
-  for (const key in object1) {
+  for (const key of Object.keys(object1)) {
     merged[key] = object1[key];
   }
-  for (const key in object2) {
+  for (const key of Object.keys(object2)) {
     merged[key] = object2[key];
   }
   return merged;
