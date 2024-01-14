@@ -1,15 +1,16 @@
 // Get day number
 
-// Step 3
-// Improve naming
+// Step 4
+// Change 'DAYS' elements to lowercase
+// Simplify code
 
 'use strict';
 
-const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const DAYS = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 
 const getDayNum = (str) => {
   for (let i = 0; i < DAYS.length; i++) {
-    if (str.startsWith(DAYS[i].toLowerCase())) {
+    if (str.startsWith(DAYS[i])) {
       return i + 1;
     }
   }
