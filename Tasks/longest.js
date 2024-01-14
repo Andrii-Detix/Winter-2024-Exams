@@ -1,20 +1,17 @@
 // Find longest string
 
-// Step 5
-// Improve naming
+// Step 6
+// Change if..else branches
+// Change let str to const str
 
 'use strict';
 
 const getLongestString = (lines = []) => {
   let maxLength = -1;
   let res;
-  for (let str of lines) {
+  for (const str of lines) {
     if (str.length > maxLength) {
       maxLength = str.length;
-    } else {
-      str = 0;
-    }
-    if (str.length >= maxLength) {
       res = str;
     }
   }
