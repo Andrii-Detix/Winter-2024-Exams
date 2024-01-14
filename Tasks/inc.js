@@ -1,12 +1,12 @@
 // Increment all numbers in dictionary
 
-// Step 3
-// Improve naming
+// Step 4
+// Prefer const, minimize let
 
 'use strict';
 
-let incNumbers = (obj) => {
-  for (key in obj) {
+const incNumbers = (obj) => {
+  for (const key in obj) {
     if ((typeof obj[key]).charAt(0).toUpperCase() === "N") {
       obj[key] = obj[key] + 1;
     }
